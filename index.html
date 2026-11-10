@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="ru" data-type="service" data-radius="soft" data-buttons="block" data-motion>
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Севертранс: склад ответственного хранения и кросс-докинг в Санкт-Петербурге</title>
+<meta name="description" content="Склад в 2 км от КАД на Уманском переулке: ответственное хранение от 10 м², кросс-докинг круглосуточно, 3PL и фулфилмент для маркетплейсов. Запуск на следующий день.">
+<meta name="site-kind" content="other">
+<meta name="page-type" content="service">
+<meta name="theme-color" content="#f7f7f7">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/system.css">
+<link rel="stylesheet" href="assets/ui/cards.css">
+<link rel="stylesheet" href="assets/motion/motion.css">
+<link rel="stylesheet" href="assets/layout/layout.css">
+<style>
+:root {
+  --p-bg: #f7f7f7; --p-surface: #ebebeb; --p-ink: #0d2a1c; --p-muted: #5f6b64;
+  --p-accent: #f6e016; --p-accent-ink: #0d2a1c; --p-action: #0d2a1c; --p-action-ink: #f7f7f7;
+  --p-inv-bg: #0d2a1c; --p-inv-surface: #1c3629; --p-inv-ink: #f7f7f7; --p-inv-muted: #97a39c;
+  --p-inv-accent: #f6e016; --p-inv-accent-ink: #0d2a1c; --p-inv-action: #f6e016; --p-inv-action-ink: #0d2a1c;
+  --font-display: "Onest", system-ui, sans-serif;
+  --font-text: "Onest", system-ui, sans-serif;
+  --display-weight: 400;
+  --display-tracking: -0.035em;
+  --display-tracking-xl: -0.04em;
+}
+</style>
+<style>
+  /* page CSS: only inside visuals, plus the browser surfaces */
+  ::selection { background: var(--p-accent); color: var(--p-ink); }
+  html { accent-color: var(--p-ink); }
+  /* the phone bar: call beside the main action */
+  @media (max-width: 639px) { .actionbar { display: grid; grid-template-columns: 1fr 1.6fr; gap: var(--s-3); } }
+  /* the place photograph: one wide frame on the .wrap lines */
+  .place-photo { aspect-ratio: 3 / 1; }
+  @media (max-width: 1023px) { .place-photo { aspect-ratio: 4 / 3; } }
+  /* terms: four points on the grid's columns beside one photograph */
+  .terms-grid { row-gap: var(--s-7); }
+  @media (min-width: 1024px) { .terms-grid { grid-template-rows: auto auto 1fr; } }
+  .terms-photo { grid-row: 1 / span 3; align-self: stretch; min-width: 0; }
+  .point { padding-top: var(--s-5); border-top: 1px solid var(--line); }
+  .terms-photo > img { max-width: 100%; }
+  .point h3 { font: 500 var(--t-card)/1.3 var(--font-text); letter-spacing: -0.01em; margin-bottom: var(--s-2); }
+  @media (max-width: 1023px) { #terms .point { grid-column: auto / span 6; } #terms .terms-photo { grid-row: auto; grid-column: 1 / -1; min-width: 0; width: 100%; align-self: start; aspect-ratio: 21 / 9; order: 5; } #services .rows p { display: none; } }
+  @media (max-width: 639px) { #terms .point { grid-column: 1 / -1; } #terms .terms-grid { row-gap: var(--s-4); } #terms .terms-photo { aspect-ratio: 2 / 1; } #terms .point { padding-top: 0; border-top: 0; } #terms h2 .muted { display: none; } }
+  @media (min-width: 640px) and (max-width: 1023px) { #clients { --h: 2 } }
+  /* phone: the service rows keep name and value, the photo answers a tap */
+  @media (max-width: 639px) { #services .rows p { display: none; } }
+  /* the phone number lives in the action bar below 1024 */
+  @media (max-width: 1023px) { .nav__actions .nav__link { display: none; } }
+  /* under 640 the action bar carries the main action, the bar keeps the logo and the menu */
+  @media (max-width: 639px) { .nav:not(.is-open) .nav__bar > .nav__actions { display: none; } .nav:not(.is-open) .nav__bar > .nav__toggle { margin-left: auto; } #clients .tile__media { aspect-ratio: 3 / 1; } .hero .btn--secondary { display: none; } }
+  /* the footer: address and contacts set large on the two text lines */
+  .footer__contact { font: var(--display-weight) var(--t-h3)/1.25 var(--font-display); letter-spacing: var(--display-tracking); }
+  .footer__contact a { color: inherit; }
+  .footer .stack-4 > p { color: var(--ink); }
+  /* the close: the button on the lead's line, contacts right under it, the legal row at the screen's foot */
+  #contact .section-head--split { align-items: end; }
+  @media (min-width: 640px) {
+    footer#contact > .wrap { grid-template-rows: auto minmax(0, 1fr); row-gap: var(--s-9); }
+    #contact .closing__links { display: flex; flex-direction: column; gap: var(--s-7); }
+  }
+  #contact .footer__legal { margin-top: auto; padding-top: var(--s-5); border-top: 1px solid var(--line); }
+  @media (max-width: 1023px) { .footer__address { font-size: 32px; line-height: 1.2; } }
+</style>
+</head>
+<body>
+<!-- type: service (site-kind other): warehouse storage, cross-docking and 3PL for B2B in St Petersburg
+     deal: hero photo (data-calm left, words in a solid box), nav-centre style links (no menu panel),
+           close as a head row, footer-visit, rhythm space, buttons block, mark ring;
+           palette offwhite-bottle-yellow; type Onest (Cyrillic).
+     screens at 1440x900: hero 1, services 1, clients 1, place 1, terms 1, security 1, footer.closing 1
+     Photographs: data-source="client-avito" from the client's Avito listing, the rest Pexels stand-ins
+     (data-source="library-pexels"), list in ../docs/photos.md -->
+
+<header class="nav">
+  <div class="wrap nav__bar">
+    <a class="nav__logo" href="#top"><span class="mark" data-mark="ring" aria-hidden="true"></span>Севертранс</a>
+    <nav class="nav__links" aria-label="Основное меню">
+      <div class="nav__item"><a class="nav__link" href="#services">Услуги</a></div>
+      <div class="nav__item"><a class="nav__link" href="#clients">Клиенты</a></div>
+      <div class="nav__item"><a class="nav__link" href="#place">Склад</a></div>
+      <div class="nav__item"><a class="nav__link" href="#terms">Условия</a></div>
+    </nav>
+    <div class="nav__actions">
+      <a class="nav__link" href="tel:+79319646231">+7 931 964-62-31</a>
+      <a class="btn btn--primary" href="https://wa.me/79319646231?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D1%85%D1%80%D0%B0%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BD%D0%B0%20%D1%81%D0%BA%D0%BB%D0%B0%D0%B4%D0%B5%20%D0%BD%D0%B0%20%D0%A3%D0%BC%D0%B0%D0%BD%D1%81%D0%BA%D0%BE%D0%BC." target="_blank" rel="noopener">Написать в WhatsApp</a>
+    </div>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-label="Меню">
+      <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 5h14M2 13h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero hero--photo" data-calm="left" aria-labelledby="hero-h">
+    <img class="hero__bg" src="assets/img/hero-1920.webp" srcset="assets/img/hero-1200.webp 1200w, assets/img/hero-1920.webp 1920w" sizes="100vw" alt="Проход между стеллажами на складе, погрузчик везёт груз" width="1920" height="1280" style="--ly-pos: 62% 50%; --ly-pos-phone: 55% 50%" fetchpriority="high" data-source="library-pexels" data-subject="склад, стеллажи, погрузчик">
+    <div class="wrap"><div class="hero-text">
+      <div class="hero__text">
+        <h1 id="hero-h">Склад в 2&nbsp;км от КАД</h1>
+        <p class="hero__lead">Хранение паллет от 10&nbsp;м², кросс-докинг круглосуточно и&nbsp;3PL для маркетплейсов в&nbsp;Петербурге. Запуск на следующий день.</p>
+        <div class="btn-row">
+          <a class="btn btn--primary" href="https://wa.me/79319646231?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D1%85%D1%80%D0%B0%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BD%D0%B0%20%D1%81%D0%BA%D0%BB%D0%B0%D0%B4%D0%B5%20%D0%BD%D0%B0%20%D0%A3%D0%BC%D0%B0%D0%BD%D1%81%D0%BA%D0%BE%D0%BC." target="_blank" rel="noopener">Написать в WhatsApp<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+          <!-- Max: replace #contact with the client's profile link (max.ru/u/...) once it is supplied -->
+          <a class="btn btn--secondary" href="#contact">Написать в Max</a>
+        </div>
+      </div>
+    </div></div>
+  </section>
+
+  <section class="section" id="services" aria-labelledby="services-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="services-h">Что делаем с грузом. <span class="muted">Пять услуг на одном складе.</span></h2>
+      </div>
+      <div class="grid grid--top fill" data-peek>
+        <ul class="rows span-6">
+          <li data-peek-to="storage" tabindex="0"><span class="rows__name">Ответственное хранение</span><p>Выделим нужную площадь, стеллажное или напольное хранение.</p><span class="rows__value">от 10&nbsp;м²</span></li>
+          <li data-peek-to="crossdock" tabindex="0"><span class="rows__name">Кросс-докинг</span><p>Перевалка из фуры в фуру и сортировка сборных грузов. Груз уходит в день прихода.</p><span class="rows__value">24/7</span></li>
+          <li data-peek-to="fulfil" tabindex="0"><span class="rows__name">Полный цикл 3PL</span><p>Приёмка, маркировка, стикеровка, «Честный ЗНАК», комплектация заказов.</p><span class="rows__value">FBS, DBS, DBW, C&amp;C</span></li>
+          <li data-peek-to="loading" tabindex="0"><span class="rows__name">Погрузка и разгрузка</span><p>Вся техника в наличии: погрузчики, штабелёры, рохли.</p><span class="rows__value">своя техника</span></li>
+          <li data-peek-to="delivery" tabindex="0"><span class="rows__name">Доставка и документы</span><p>Выдача и адресная доставка заказов до клиента. Полный пакет документов.</p><span class="rows__value">ТТН, УПД</span></li>
+        </ul>
+        <div class="frame frame--photo frame--fill span-6 start-7">
+          <img loading="lazy" decoding="async" class="frame__img" data-peek-for="storage" src="assets/img/storage-1200.webp" srcset="assets/img/storage-640.webp 640w, assets/img/storage-1200.webp 1200w" sizes="(max-width: 1023px) 100vw, 1000px" alt="Высокие стеллажи с коробами вдоль прохода" width="1200" height="675" data-source="library-pexels" data-subject="стеллажное хранение">
+          <img loading="lazy" decoding="async" class="frame__img" data-peek-for="crossdock" src="assets/img/av-crossdock-1280.webp" srcset="assets/img/av-crossdock-640.webp 640w, assets/img/av-crossdock-1280.webp 1280w" sizes="(max-width: 1023px) 100vw, 1000px" alt="Погрузчик проезжает к воротам, у которых стоят фуры под перевалку" width="1280" height="883" data-source="client-avito" data-subject="кросс-докинг" hidden>
+          <img loading="lazy" decoding="async" class="frame__img" data-peek-for="fulfil" src="assets/img/fulfil-1200.webp" srcset="assets/img/fulfil-640.webp 640w, assets/img/fulfil-1200.webp 1200w" sizes="(max-width: 1023px) 100vw, 1000px" alt="Руки заклеивают коробку скотчем на упаковочном столе" width="1200" height="800" data-source="library-pexels" data-subject="упаковка заказа" hidden>
+          <img loading="lazy" decoding="async" class="frame__img" data-peek-for="loading" src="assets/img/av-forklift-1280.webp" srcset="assets/img/av-forklift-640.webp 640w, assets/img/av-forklift-1280.webp 1280w" sizes="(max-width: 1023px) 100vw, 1000px" alt="Погрузчик снимает упакованный груз со штабеля во дворе склада" width="1280" height="883" data-source="client-avito" data-subject="погрузчик с грузом" hidden>
+          <img loading="lazy" decoding="async" class="frame__img" data-peek-for="delivery" src="assets/img/av-van-1280.webp" srcset="assets/img/av-van-640.webp 640w, assets/img/av-van-1280.webp 1280w" sizes="(max-width: 1023px) 100vw, 1000px" alt="Погрузчик ставит паллету в кузов фургона" width="1280" height="883" data-source="client-avito" data-subject="погрузка в фургон" hidden>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="clients" aria-labelledby="clients-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="clients-h">Для кого работаем. <span class="muted">Выберите свою задачу и напишите.</span></h2>
+      </div>
+      <div class="grid fill">
+        <a class="tile span-4" href="https://wa.me/79319646231?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%9D%D1%83%D0%B6%D0%BD%D0%BE%20%D1%85%D1%80%D0%B0%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BF%D0%B0%D0%BB%D0%BB%D0%B5%D1%82%20%D0%B8%20%D0%BE%D1%82%D0%B3%D1%80%D1%83%D0%B7%D0%BA%D0%B8%20%D0%BF%D0%BE%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D0%BC." target="_blank" rel="noopener">
+          <div class="tile__media"><img src="assets/img/distrib-900.webp" srcset="assets/img/distrib-480.webp 480w, assets/img/distrib-900.webp 900w" sizes="(max-width: 1023px) 100vw, 410px" alt="Проход склада с паллетами на стеллажах" width="900" height="600" loading="lazy" decoding="async" data-source="library-pexels" data-subject="паллеты на стеллажах"></div>
+          <div class="tile__head"><h3>Дистрибьюторам и оптовикам</h3></div>
+          <p>Храним паллеты, собираем отгрузки по заказам и перевалим сборный груз в день прихода.</p>
+        </a>
+        <a class="tile span-4" href="https://wa.me/79319646231?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%9D%D1%83%D0%B6%D0%BD%D0%BE%20%D0%BF%D1%80%D0%B8%D0%BD%D1%8F%D1%82%D1%8C%20%D0%BA%D0%BE%D0%BD%D1%82%D0%B5%D0%B9%D0%BD%D0%B5%D1%80%20%D0%B8%D0%BB%D0%B8%20%D1%84%D1%83%D1%80%D1%83%20%D0%B8%20%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%81%D1%82%D0%B8%D1%82%D1%8C%20%D0%B3%D1%80%D1%83%D0%B7." target="_blank" rel="noopener">
+          <div class="tile__media"><img src="assets/img/av-truck-720.webp" alt="Фура с открытым тентом, внутри упакованный груз на паллетах" width="720" height="883" loading="lazy" decoding="async" data-source="client-avito" data-subject="фура с грузом" style="object-position: 50% 55%"></div>
+          <div class="tile__head"><h3>Импортёрам и производителям</h3></div>
+          <p>Принимаем фуры и контейнеры, делаем перетарку и маркировку перед отправкой в сети.</p>
+        </a>
+        <a class="tile span-4" href="https://wa.me/79319646231?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D1%84%D1%83%D0%BB%D1%84%D0%B8%D0%BB%D0%BC%D0%B5%D0%BD%D1%82%20%D0%B4%D0%BB%D1%8F%20%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%D0%BF%D0%BB%D0%B5%D0%B9%D1%81%D0%BE%D0%B2." target="_blank" rel="noopener">
+          <div class="tile__media"><img src="assets/img/sellers-900.webp" srcset="assets/img/sellers-480.webp 480w, assets/img/sellers-900.webp 900w" sizes="(max-width: 1023px) 100vw, 410px" alt="Коробки с маркировкой на складской полке" width="900" height="600" loading="lazy" decoding="async" data-source="library-pexels" data-subject="коробки для отправки"></div>
+          <div class="tile__head"><h3>Продавцам маркетплейсов</h3></div>
+          <p>Приёмка, стикеровка и доставка поставок на склады Ozon и Wildberries.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="place" aria-labelledby="place-h">
+    <div class="wrap">
+      <div class="section-head section-head--split">
+        <h2 id="place-h">Склад на Уманском переулке, 2&nbsp;км от КАД</h2>
+        <div class="stack-4"><p>Удобное расположение экономит время и деньги на транспорте. Фуры подъезжают к рампе без заезда в центр.</p>
+        <p><a class="link" href="https://yandex.ru/maps/?text=%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%2C%20%D0%A3%D0%BC%D0%B0%D0%BD%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BF%D0%B5%D1%80%D0%B5%D1%83%D0%BB%D0%BE%D0%BA%2C%2075" target="_blank" rel="noopener">На карте</a></p></div>
+      </div>
+      <div class="frame frame--photo place-photo"><img class="frame__img" src="assets/img/dock-1920.webp" srcset="assets/img/dock-900.webp 900w, assets/img/dock-1920.webp 1920w" sizes="(max-width: 1360px) 100vw, 1280px" alt="Три полуприцепа у рампы склада" width="1920" height="1282" loading="lazy" decoding="async" data-source="library-pexels" data-subject="рампа с фурами"></div>
+    </div>
+  </section>
+
+  <section class="section" id="terms" aria-labelledby="terms-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="terms-h">Условия работы. <span class="muted">Сегодня обсудим задачу, завтра примем груз.</span></h2>
+      </div>
+      <div class="grid grid--top fill terms-grid">
+        <div class="point span-3"><h3>Фиксированные цены</h3><p>Честные условия без скрытых платежей. Платите только за оказанные услуги.</p></div>
+        <div class="point span-3 start-4"><h3>Запуск за 1 день</h3><p>Персональный менеджер подберёт тариф под ваш объём и начнёт работу завтра.</p></div>
+        <div class="frame frame--photo terms-photo span-6 start-7"><img class="frame__img" src="assets/img/av-pallets-1280.webp" alt="Сотрудник склада с гидравлической тележкой у штабеля паллет" width="1280" height="883" loading="lazy" decoding="async" data-source="client-avito" data-subject="паллеты и рохля"></div>
+        <div class="point span-3"><h3>Ответственность по договору</h3><p>Работаем официально и отвечаем за груз. Юрлица и ИП, без НДС.</p></div>
+        <div class="point span-3 start-4"><h3>Охрана круглосуточно</h3><p>Видеонаблюдение, пропускной режим, чистота и порядок на складе.</p></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer closing footer--visit g2m" id="contact" aria-labelledby="close-h">
+  <div class="wrap">
+    <div class="closing__cta">
+      <div class="section-head--split">
+        <div><h2 id="close-h">Покажем склад и обсудим ваш груз</h2><p class="t-lead">Приезжайте на осмотр склада, мы на связи и всё покажем.</p></div>
+        <a class="btn btn--primary" href="https://wa.me/79319646231?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D1%85%D1%80%D0%B0%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BD%D0%B0%20%D1%81%D0%BA%D0%BB%D0%B0%D0%B4%D0%B5%20%D0%BD%D0%B0%20%D0%A3%D0%BC%D0%B0%D0%BD%D1%81%D0%BA%D0%BE%D0%BC." target="_blank" rel="noopener">Написать в WhatsApp<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+      </div>
+    </div>
+    <div class="closing__links">
+      <div class="grid">
+        <div class="span-6 stack-4">
+          <h4>Адрес склада</h4>
+          <address class="footer__address">Санкт-Петербург,<br>Уманский переулок, 75</address>
+          <p>Метро Ладожская, 2&nbsp;км от КАД. <a class="link" href="https://yandex.ru/maps/?text=%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%2C%20%D0%A3%D0%BC%D0%B0%D0%BD%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BF%D0%B5%D1%80%D0%B5%D1%83%D0%BB%D0%BE%D0%BA%2C%2075" target="_blank" rel="noopener">Построить маршрут</a></p>
+        </div>
+        <div class="span-6 start-7 stack-4">
+          <h4>Контакты</h4>
+          <p class="footer__contact"><a href="tel:+79319646231">+7 931 964-62-31</a><br><a href="mailto:golubev@severtrans-msk.ru">golubev@severtrans-msk.ru</a></p>
+          <p>WhatsApp и Max по этому номеру.</p>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <span>&copy; 2026 ООО «Севертранс»</span>
+        <span>Ответственное хранение, кросс-докинг и 3PL в Санкт-Петербурге</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<nav class="actionbar" aria-label="Быстрая связь">
+  <a class="btn btn--secondary" href="tel:+79319646231">Позвонить</a>
+  <a class="btn btn--primary" href="https://wa.me/79319646231?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D1%85%D1%80%D0%B0%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BD%D0%B0%20%D1%81%D0%BA%D0%BB%D0%B0%D0%B4%D0%B5%20%D0%BD%D0%B0%20%D0%A3%D0%BC%D0%B0%D0%BD%D1%81%D0%BA%D0%BE%D0%BC." target="_blank" rel="noopener">Написать в WhatsApp</a>
+</nav>
+
+<script type="module" src="assets/system.js"></script>
+<script type="module" src="assets/motion/motion.js"></script>
+<script type="module" src="assets/layout/layout.js"></script>
+</body>
+</html>
